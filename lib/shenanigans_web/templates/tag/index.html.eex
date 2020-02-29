@@ -1,0 +1,8 @@
+<section>
+  <h2>Listing posts tagged with tag</h2>
+  <%= for post <- @posts do %>
+    <%= link post.title, to: Routes.post_path(@conn, :show, post) %>
+    <p><%= post.tags %></p>
+    <p><%= post.description %></p>
+  <% end %>
+</section>
