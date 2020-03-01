@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title><%= assigns[:page_title] || "Shenanigans · Phoenix Framework" %></title>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#502e71" />
+    <meta property="og:url" content="https://www.hansjhoffman.dev" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<%= Routes.static_path(@conn, "/images/logo.svg") %>" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="640" />
+    <meta name="twitter:site" content="https://www.hansjhoffman.dev" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:image" content="<%= Routes.static_path(@conn, "/images/logo.svg") %>" />
+    <title><%= assigns[:page_title] || "Blog · Hans Hoffman" %></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i&display=swap" />
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>" />
+    <link rel="icon" href="<%= Routes.static_path(@conn, "/favicon.ico") %>" />
+    <link rel="alternate" href="<%= Routes.static_path(@conn, "/rss.xml") %>" type="application/rss+xml" />
     <%= csrf_meta_tag() %>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          </ul>
-        </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
+    <header class="">
+
     </header>
-    <main role="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <main role="main" class="">
+      <p class="alert alert-info" role="alert">Website is a WIP but content is still good :)</p>
       <%= render @view_module, @view_template, assigns %>
     </main>
+    <footer>
+      Made with <a href="https://phoenixframework.org/" class="">Elixir + Phoenix</a> & <a href="https://elm-lang.org/" class="">Elm</a>
+    </footer>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

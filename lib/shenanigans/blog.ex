@@ -34,7 +34,7 @@ defmodule Shenanigans.Blog do
       [%Post{}, ...]
 
   """
-  def all_posts(), do: @posts
+  def all_posts, do: @posts
 
   @doc """
   Returns a post by the given slug
